@@ -1,3 +1,9 @@
+/*Written by:
+Caleob King
+
+Date: 6/14/25
+*/
+
 //general variables
 const myName = "Caleob King";
 const n1 = 3.14159;
