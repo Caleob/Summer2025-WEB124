@@ -1,0 +1,161 @@
+/*
+Written by Caleob King
+Date:6/22/2025
+
+Notable things learned in this project (css):
+I found the origin movement very challenging to keep track of but it's nice to know this is an option
+Still struggling with Flex Box. I must have a mental block about it.
+I switched to grid in my lst class as soon as I could. It makes more sense to me.
+
+I'm very happy with the overall look.
+I wanted the colors and styles to look like a radium clock
+*/
+
+html {
+    background: #018DED url(https://fastly.picsum.photos/id/120/4928/3264.jpg?hmac=i-8mkfKj_gRyQt9ZJVhbIBXbtIBNcsbI_gwNe_39vus);
+    background-size: cover;
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column; /*changed to makethe date appear ABOVE the clock*/
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.date {
+    text-align: center;
+    font-size: 8rem;
+    color: rgb(160, 214, 80);
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border: 60px solid white;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+    0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px #EFEFEF,
+    inset 0 0 10px black,
+    0 0 10px rgba(0,0,0,0.2);
+}
+
+
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.moon-container {
+    position: absolute;
+}
+
+.face-container {
+    transform:translate(-95px,-95px);
+}
+
+.moon-container img{
+    transform-origin: 50% 40%;
+    transform: scale(75%) translate(60px,-600px);
+    
+}
+
+.face-container img{
+    width: 500px;
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: rgb(171, 228, 151);
+    position: absolute;
+    top: 50%;
+}
+
+.second-hand {
+    transform-origin: 100% 50%;
+    transform:rotate(90deg);
+    background: rgb(210, 137, 160);
+}
+.min-hand {
+    transform-origin: 100% 50%;
+    transform:rotate(90deg);
+    background: rgb(171, 228, 151);
+}
+.hour-hand {
+    transform-origin: 100% 50%;
+    height: 10px;
+    border-radius: 6px;
+    transform:rotate(90deg);
+    background: rgb(171, 228, 151);
+    transition: transform 0.01s linear; 
+}
+
+.sun {
+    width: 60px;
+    height:auto;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    
+}
+
+#rise {
+    transform: translate(140px, -90%) rotate(0deg);
+    transform-origin: -140px 100%;
+}
+
+#set {
+    transform: translate(-200px, -90%) rotate(5deg);
+    transform-origin: 200px 100%;
+}
+.sun img {
+    width: 60px;
+    height: auto;
+    display: block;
+}
+
+.button-container {
+    width: 200px;
+    height: 80px;
+    color:rgb(160, 214, 80);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#button-1, #button-2 {
+    flex: 1;
+    width:60px;
+    height:60px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0,.6);
+    border-style: solid;
+    border-radius: 40px;
+    border-width: 6px;
+    border-color: rgb(212, 198, 4);
+}
+
+#button-1:hover,
+#button-2:hover {
+    scale:1.06;
+    border-color: aliceblue;
+}
