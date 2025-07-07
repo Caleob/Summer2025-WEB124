@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<!-- 
+Written by Caleob King
+Date:7/6/2025
+
+Notable things learned in this project (html):
+I (re)learned about the button class
+I learned more about the canvas object.
+I found (but do not fully understand) how to get the webcam information
+and then place it on the canvas.
+
+For some reason I had not seen much use of invisible elements in the html
+Here we have a canvas element and all the audio elements that do not render on the screen.
+
+-->
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS WEBCAM Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <div class="keys">
+        <button class="key" id="clap-btn">
+            <span class="sound">clap</span>
+        </button>
+        <button class="key" id="hihat-btn">
+            <span class="sound">hihat</span>
+        </button>
+        <button class="key" id="kick-btn">
+            <span class="sound">kick</span>
+        </button>
+        <button class="key" id="snare-btn">
+            <span class="sound">snare</span>
+        </button>
+        <button class="key" id="tom-btn">
+            <span class="sound">tom</span>
+        </button>
+    </div>
+
+    <audio data-key="clap" src="sounds/clap.wav"></audio>
+    <audio data-key="hihat" src="sounds/hihat.wav"></audio>
+    <audio data-key="kick" src="sounds/kick.wav"></audio>
+    <audio data-key="snare" src="sounds/snare.wav"></audio>
+    <audio data-key="tom" src="sounds/tom.wav"></audio>
+
+    <div id="container">
+        <video id="webCamVideo" autoplay muted></video>
+        <canvas id="canvas" width="640" height="480"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+
+
+    </script>
+</body>
+</html>
