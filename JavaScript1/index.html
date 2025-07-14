@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!-- 
+Written by Caleob King
+Date:6/22/2025
+
+Notable things learned in this project (html):
+I learned how to use transitions to smoothly move objects and that there is a
+LOT of flexibility in these options.
+
+I still don't really understand Flex Box but between the start files and
+trial and error and some absolute positioning it all worked out.
+
+I don't have a lot to say about the HTML so I'll put it here that I pulled the
+astronomical data from https://sunrise-sunset.org/us/wichita-ks/2025/12 and used my python
+skills to print out a huge JS object that I could refer to. (see the data.js file)
+
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS + CSS Clock</title>
+  <link rel="icon" href="https://fav.farm/🔥" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="date">1/01/25</div>
+    <div class="clock">
+      <div class="clock-face">
+        <div class="face-container">
+            <img src="images/radiumFace.png" alt="Clock Face">
+        </div>    
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="moon-container">
+            <img src="images/full.png" alt="Full Moon">
+        </div>
+        <div class="sun" id="rise">
+            <img src="images/sunUp.png" alt="Full Moon">
+        </div>
+        <div class="sun" id="set">
+            <img src="images/sunDown.png" alt="Full Moon">
+        </div>
+      </div>
+    </div>
+    <div class="button-container">
+        <div id="button-1">RT</div>
+        <div id="button-2">Fast</div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/*
+Written by Caleob King
+Date:7/6/2025
+
+Notable things learned in this project (css):
+
+I didn't do much notable with the css but I did find I could use a negative margin value
+in order to get the buttons to overlap the webcam slightly.
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.keys {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: -5px;
+  width: 640px; /* Match the width of the canvas */
+  margin-left: auto; /* Center the keys */
+  margin-right: auto; /* Center the keys */
+}
+
+.key {
+  width: 20%; /* Each key takes up 20% of the total width */
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #b9ea65;
+  cursor: pointer;
+}
+
+.key:hover {
+  background-color: #ccc;
+}
+
+
+.key .sound {
+  display: block;
+  font-size: 16px;
+  color: #666;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#canvas {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 640px;
+  height: 480px;
+}
+
+#video {
+  display: none;
+}
+
+#controls {
+  margin-bottom: 20px;
+}
+
+#startBtn, #stopBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+#startBtn:hover, #stopBtn:hover {
+  background-color: #3e8e41;
+}
+
+#canvas {
+  display: none;
+}
