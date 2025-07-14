@@ -1,0 +1,69 @@
+/*
+Written by Caleob King
+Date:7/13/2025
+
+Notable things learned in this project (css):
+
+I didn't do much notable with the cssand in fact the website is objectively ugly.
+I spent more time than I wanted to on the math of drawing arrows and the CSS could use a major upgrade!
+
+I am happy at the way flexbox makes maximum use of the screen width here.
+*/
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+#canvasWrapper {
+    position: relative;
+    flex-grow: 1;
+    height: 100%; /* Take full height */
+}
+
+#backgroundCanvas, #draw {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#draw {
+    border: 10px solid rgb(173, 216, 230);
+    border-radius: 30px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    width: 200px; /* Fixed width */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.controlButton {
+    font-size: 24px;
+    text-align: center;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.controlButton:hover {
+    background-color: #ccc;
+}
+
+.spacer {
+    width: 100%;
+    height: 75px;
+}

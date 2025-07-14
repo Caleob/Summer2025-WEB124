@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!-- 
+
+Written by Caleob King
+Date:7/13/2025
+
+I made many items of the same class here (controlButton) so that I could grab an array
+of the buttons and use that to create the event listeners I needed.
+
+I used a spacer element to add some white space between controls with no content
+but whose size I could control with the CSS. It's not something I've done before.
+It's a little inflexible and not really responsive but it was effective.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="canvasWrapper">
+        <canvas id="backgroundCanvas" style="position: absolute; top: 0; left: 0;"></canvas>
+        <canvas id="draw" style="position: absolute; top: 0; left: 0;"></canvas>
+    </div>
+    <div id="controls">
+        Background Image
+        <div class="controlButton">&#8593;</div>
+        <div class="controlButton">&#8595;</div>
+
+        <div class="spacer"></div>
+
+        Brush Size
+        <div class="controlButton">&#8593;</div>
+        <div class="controlButton">&#8595;</div>
+        
+        <div class="spacer"></div>
+
+        Text Size
+        <div class="controlButton">&#8593;</div>
+        <div class="controlButton">&#8595;</div>
+
+        <div class="spacer"></div>
+        
+        <div class="controlButton">Paint Brush</div>        
+        <div class="controlButton">Arrow</div>
+        <div class="controlButton">Text</div>         
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
