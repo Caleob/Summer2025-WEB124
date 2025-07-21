@@ -1,0 +1,122 @@
+/*
+Written by Caleob King
+Date:7/20/2025
+
+Notable things learned in this project (css):
+I did not know about the '*' key and how it can be used to reach all the element types.
+
+I had forgotten that I could set images in the css directly instead of adding them into the html
+It ws very interesting how the transition property worked to perform the animation.
+
+*/
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background: #ffc600;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 10rem;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+.score {
+  background: rgba(255,255,255,0.2);
+  padding: 0 3rem;
+  line-height: 1;
+  border-radius: 1rem;
+}
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url(images/dirt.svg) bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background: url('images/mole.png') bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.equation {
+  position: absolute;
+  width: 30%;
+  top: 70%;  
+  left: 50%;
+  transform: translate(-50%, -50%); /* Moved origin to its exact middle */
+  z-index: 1; /* ensure it's on top of the mole image */
+}
+
+.hole.up .mole {
+  top: 0;
+}
+
+.container {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: auto;
+  width: 100%;
+}
+
+.transform:hover {
+    scale: 1.1;
+    box-shadow: 5px;
+}
+
+.transform img {
+  margin-top: 40px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0;
+  object-fit: contain;
+}
