@@ -1,0 +1,127 @@
+/*
+Written by Caleob King
+Date:7/25/2025
+
+Notable things learned in this project (css):
+
+For some reason I never had occasion to have an element overflow its container so
+
+width: 120%
+
+was an eye opener for me.
+Also the practice with z-indexes is good.
+
+
+I KNOW THIS WEBPAGE DOESN"T LOOK GOOD!
+
+I put the image just anywhere and then figured out a REALLY complicated transformation of
+lattiude and longitude into x,y coordinates.
+
+Then when I tried to move the image to the place I wanted my transformation didn't work.
+
+It's a lesson to refine the look of the page first and then get the complicated functionality working next.
+
+*/
+
+
+html {
+  box-sizing: border-box;
+  background: #ffc600;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+input {
+  width: 100%;
+  padding: 20px;
+}
+
+.search-form {
+  width: 40%;
+  max-width: 400px;
+  margin: 50px auto;
+  flex-shrink: 0;
+}
+
+input.search {
+  margin: 0;
+  text-align: center;
+  outline: 0;
+  border: 10px solid #F7F7F7;
+  width: 120%;
+  left: -10%;
+  position: relative;
+  top: 10px;
+  z-index: 2;
+  border-radius: 5px;
+  font-size: 40px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+}
+
+.suggestions {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /*perspective: 20px;*/
+}
+
+.suggestions li {
+  background: white;
+  list-style: none;
+  border-bottom: 1px solid #D8D8D8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+  margin: 0;
+  padding: 20px;
+  transition: background 0.2s;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+
+.suggestions li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
+}
+
+.suggestions li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
+}
+
+span.population {
+  font-size: 15px;
+}
+
+.hl {
+  background: #ffc600;
+}
+
+.map-area {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  padding: 90px;
+}
+
+#myCavas {
+  max-width: 100%;
+  height: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}

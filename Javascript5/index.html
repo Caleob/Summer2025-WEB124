@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<!-- 
+
+Written by Caleob King
+Date:7/25/2025
+
+This HTML is simple and didn't change much from the video
+I added a seond map-area in the body to put to the right of the search form which
+I plan to add pins at the lattitude and longitude specified in the data we are pulling in
+
+-->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Type Ahead 👀</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://fav.farm/✅" />
+</head>
+<body>
+
+  <form class="search-form">
+    <input type="text" class="search" placeholder="City or State">
+    <ul class="suggestions">
+      <li>Filter for a city</li>
+      <li>or a state</li>
+    </ul>
+  </form>
+  <div class="map-area">
+    <canvas id="myCanvas" width="500" height="300"></canvas>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
